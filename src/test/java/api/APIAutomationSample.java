@@ -8,97 +8,92 @@ import org.testng.Assert;
 public class APIAutomationSample {
     public static void main(String[] args) {
 
-        /**
-         * Response is an interface coming from the RestAssured Library
-         * The Response variable "response" stores all the components of API calls
-         * including the request and response
-         * RestAssured is written with BDD flow
-         *
-         */
         Response response;
 
         Faker faker = new Faker();
 
+
+        //Creating A User
         response = RestAssured
                 .given().log().all()
                 .header("Content-Type", "application/json")
-                .header("Authorization", "Bearer 82e648c9184caa17b36b3591357864868e4bcdcae3faf9adf2c53ffbe7c29c11")
+                .header("Authorization", "Bearer 28ca0f699d6aa5c709a9b1d0e0a67861e1bf57d3d7ad524d715d22b9e7d8b018")
                 .body("{\n" +
                         "    \"name\": \"" + faker.name().fullName() + "\",\n" +
                         "    \"gender\": \"male\",\n" +
-                        "    \"email\": \"" + faker.internet().emailAddress() + "\",\n" +
+                        "    \"email\": \""+ faker.internet().emailAddress() +"\",\n" +
                         "    \"status\": \"active\"\n" +
                         "}")
                 .when().post("https://gorest.co.in/public/v2/users")
                 .then().log().all().extract().response();
 
-       // System.out.println(response.asString());
+        System.out.println(response.asString());
 
         int postId = response.jsonPath().getInt("id");
-       // String name = response.jsonPath().getString("name");
 
-        System.out.println("Id is coming from response " + postId);
-       // System.out.println("+++++");
-       // System.out.println(name);
-
-        response = RestAssured
+        //Getting A Specific User
+        /*response = RestAssured
                 .given().log().all()
                 .header("Content-Type", "application/json")
-                .header("Authorization", "Bearer 82e648c9184caa17b36b3591357864868e4bcdcae3faf9adf2c53ffbe7c29c11")
+                .header("Authorization", "Bearer 28ca0f699d6aa5c709a9b1d0e0a67861e1bf57d3d7ad524d715d22b9e7d8b018")
                 .when().get("https://gorest.co.in/public/v2/users/" + postId)
                 .then().log().all().extract().response();
 
-     //   response = RestAssured
-      //          .given().log().all()
-      //          .header("Content-Type", "application/json")
-       //         .header("Authorization", "Bearer 82e648c9184caa17b36b3591357864868e4bcdcae3faf9adf2c53ffbe7c29c11")
-       //         .when().get("https://gorest.co.in/public/v2/users")
-       //         .then().log().all().extract().response();
+        System.out.println("\n Id is coming from response \n");
+        System.out.println(response.asString());*/
 
+        /*
+        System.out.println("\n________________Getting All Users_________________\n");
 
+        // Getting all The Users
         response = RestAssured
                 .given().log().all()
                 .header("Content-Type", "application/json")
-                .header("Authorization", "Bearer 82e648c9184caa17b36b3591357864868e4bcdcae3faf9adf2c53ffbe7c29c11")
+                .header("Authorization", "Bearer 28ca0f699d6aa5c709a9b1d0e0a67861e1bf57d3d7ad524d715d22b9e7d8b018")
+                .when().get("https://gorest.co.in/public/v2/users" )
+                .then().log().all().extract().response();
+
+
+
+        System.out.println(response.asString());*/
+
+
+        //Updating a User
+        response = RestAssured
+                .given().log().all()
+                .header("Content-Type", "application/json")
+                .header("Authorization", "Bearer 28ca0f699d6aa5c709a9b1d0e0a67861e1bf57d3d7ad524d715d22b9e7d8b018")
                 .body("{\n" +
                         "    \"name\": \"" + faker.name().fullName() + "\",\n" +
-                        "    \"gender\": \"female\",\n" +
-                        "    \"email\": \"" + faker.internet().emailAddress() + "\",\n" +
+                        "    \"gender\": \"male\",\n" +
+                        "    \"email\": \""+ faker.internet().emailAddress() +"\",\n" +
                         "    \"status\": \"active\"\n" +
                         "}")
-                .when().put("https://gorest.co.in/public/v2/users/" + postId)
+                .when().put("https://gorest.co.in/public/v2/users/" + postId )
                 .then().log().all().extract().response();
 
 
+        System.out.println("\n________________Updating A User_________________\n");
+
+        System.out.println(response.asString());
+
+
+        int patchId = response.jsonPath().getInt("id");
+
+        Assert.assertEquals(postId, patchId, "Expected id " + patchId + "we found " + postId);
+
+
+
+        System.out.println("\n________________Deleting A User_________________\n");
+
+        //Deleting a User
         response = RestAssured
                 .given().log().all()
                 .header("Content-Type", "application/json")
-                .header("Authorization", "Bearer 82e648c9184caa17b36b3591357864868e4bcdcae3faf9adf2c53ffbe7c29c11")
-                .body("{\"gender\": \"male\"}")
-                .when().patch("https://gorest.co.in/public/v2/users/" + postId)
+                .header("Authorization", "Bearer 28ca0f699d6aa5c709a9b1d0e0a67861e1bf57d3d7ad524d715d22b9e7d8b018")
+                .when().delete("https://gorest.co.in/public/v2/users/" + postId )
                 .then().log().all().extract().response();
 
-//        response = RestAssured
-//                .given().log().all()
-//                .header("Content-Type", "application/json")
-//                .header("Authorization", "Bearer 82e648c9184caa17b36b3591357864868e4bcdcae3faf9adf2c53ffbe7c29c11")
-//                .when().delete("https://gorest.co.in/public/v2/users/" + postId)
-//                .then().log().all().extract().response();
-
-      //  int patchId = response.jsonPath().getInt("id");
-        int patchId = 5;
-
-        Assert.assertEquals(postId, patchId, "Expected id " + postId+ " we found " + patchId);
-
-
+        System.out.println(response.asString());
     }
-
-
-
-
-    }
-
-
-
-
-
+}

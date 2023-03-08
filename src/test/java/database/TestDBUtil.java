@@ -13,6 +13,7 @@ public class TestDBUtil {
         DBUtil.createDBConnection();
     }
 
+
     @Test
     public void executeDatabase(){
         List<List<Object>> result = DBUtil.getQueryResultList("select first_name, last_name from employees");
@@ -27,39 +28,35 @@ public class TestDBUtil {
             String firstName = row.get(0).toString();
             String lastName = row.get(1).toString();
 
-            System.out.println(firstName  + " " + lastName);
-
+            System.out.println(firstName + " " + lastName);
         }
-
     }
 
     @Test
-    public void executingSingleRow(){
-        String query = "select * from employees where first_name = 'Steven'";
+    public void executeSingleRow(){
+        String query = "select * from employees WHERE first_name = 'Steven'";
         List<List<Object>> result = DBUtil.getQueryResultList(query);
-        if (!result.isEmpty()){
+
+        if(!result.isEmpty()){
             List<Object> row = result.get(0);
             for (int i = 0; i < row.size(); i++) {
                 System.out.println(DBUtil.getColumnNames(query).get(i) + ": " + row.get(i));
-
             }
         }
         else {
-            System.out.println("No rows found in query first_name equals steven");
+            System.out.println("No rows found in the query");
         }
-
     }
 
     @Test
     public void executeSingleColumn(){
-        List<List<Object>> result = DBUtil.getQueryResultList("select first_name from employees");
+        List<List<Object>> result = DBUtil.getQueryResultList("select first_name, last_name from employees");
+
         for (int i = 0; i < result.size(); i++) {
             for (int j = 0; j < result.get(i).size(); j++) {
-                System.out.println(""  + (i + 1) + ". " + result.get(i).get(j));
+                System.out.println("" + (i + 1) + ". " + result.get(i).get(j));
             }
-
         }
-
 
     }
 }
