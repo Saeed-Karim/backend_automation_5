@@ -1,0 +1,41 @@
+[INFO ] 2023-03-11 13:16:33.403 [main] AddPetToStoreWithLombok - Staring the test suite
+[INFO ] 2023-03-11 13:18:26.105 [main] AddPetToStoreWithLombok - Staring the test suite
+[INFO ] 2023-03-11 13:21:38.707 [main] AddPetToStoreWithLombok - Staring the test suite
+[INFO ] 2023-03-11 13:21:44.649 [main] AddPetToStoreWithLombok - My actual pet id is 8
+[INFO ] 2023-03-11 13:25:24.632 [main] AddPetToStoreWithLombok - Staring the test suite
+[INFO ] 2023-03-11 13:25:30.636 [main] AddPetToStoreWithLombok - My actual pet id is 8
+[DEBUG] 2023-03-11 13:25:30.638 [main] AddPetToStoreWithLombok - The actual pet id should be 8 but we found 8
+[INFO ] 2023-03-11 13:28:34.555 [main] AddPetToStoreWithLombok - Staring the test suite
+[INFO ] 2023-03-11 13:28:39.739 [main] AddPetToStoreWithLombok - My actual pet id is 8
+[DEBUG] 2023-03-11 13:28:39.739 [main] AddPetToStoreWithLombok - The actual pet id should be 8 but we found 8
+[INFO ] 2023-03-11 13:35:29.014 [main] AddPetToStoreWithLombok - Staring the test suite
+[INFO ] 2023-03-11 13:35:35.098 [main] AddPetToStoreWithLombok - My id with JayWay is 8
+[INFO ] 2023-03-11 13:35:35.098 [main] AddPetToStoreWithLombok - My actual pet id is 8
+[DEBUG] 2023-03-11 13:35:35.099 [main] AddPetToStoreWithLombok - The actual pet id should be 8 but we found 8
+[INFO ] 2023-03-11 13:37:58.909 [main] AddPetToStoreWithLombok - Staring the test suite
+[INFO ] 2023-03-11 13:38:05.006 [main] AddPetToStoreWithLombok - My id with JayWay is 8
+[INFO ] 2023-03-11 13:38:05.008 [main] AddPetToStoreWithLombok - My pet tag Id with JayWay is 15
+[INFO ] 2023-03-11 13:38:05.008 [main] AddPetToStoreWithLombok - My actual pet id is 8
+[DEBUG] 2023-03-11 13:38:05.008 [main] AddPetToStoreWithLombok - The actual pet id should be 8 but we found 8
+[INFO ] 2023-03-11 13:47:28.956 [main] AddPetToStoreWithLombok - Staring the test suite
+[INFO ] 2023-03-11 13:47:33.561 [main] AddPetToStoreWithLombok - My id with JayWay is 8
+[INFO ] 2023-03-11 13:47:33.563 [main] AddPetToStoreWithLombok - My pet tag Id with JayWay is 15
+[INFO ] 2023-03-11 13:47:33.563 [main] AddPetToStoreWithLombok - My actual pet id is 8
+[DEBUG] 2023-03-11 13:47:33.563 [main] AddPetToStoreWithLombok - The actual pet id should be 8 but we found 8
+[INFO ] 2023-03-11 13:48:26.677 [main] AddPetToStoreWithLombok - Staring the test suite
+[INFO ] 2023-03-11 13:48:30.815 [main] AddPetToStoreWithLombok - My id with JayWay is 8
+[INFO ] 2023-03-11 13:48:30.818 [main] AddPetToStoreWithLombok - My pet tag Id with JayWay is 15
+[INFO ] 2023-03-11 13:48:30.818 [main] AddPetToStoreWithLombok - My actual pet id is 8
+[DEBUG] 2023-03-11 13:48:30.819 [main] AddPetToStoreWithLombok - The actual pet id should be 3 but we found 8
+[INFO ] 2023-03-11 13:50:30.542 [main] AddPetToStoreWithLombok - Staring the test suite
+[INFO ] 2023-03-11 13:50:34.493 [main] AddPetToStoreWithLombok - My id with JayWay is 8
+[INFO ] 2023-03-11 13:50:34.494 [main] AddPetToStoreWithLombok - My pet tag Id with JayWay is 15
+[INFO ] 2023-03-11 13:50:34.495 [main] AddPetToStoreWithLombok - My actual pet id is 8
+[DEBUG] 2023-03-11 13:50:34.495 [main] AddPetToStoreWithLombok - The actual pet id should be 3 but we found 8
+[INFO ] 2023-03-11 14:07:21.406 [main] AddPetToStoreWithLombok - Staring the test suite
+[INFO ] 2023-03-11 14:07:26.010 [main] AddPetToStoreWithLombok - My id with JayWay is 8
+[INFO ] 2023-03-11 14:07:26.011 [main] AddPetToStoreWithLombok - My pet tag Id with JayWay is 15
+[INFO ] 2023-03-11 14:07:26.011 [main] AddPetToStoreWithLombok - My actual pet id is 8
+[DEBUG] 2023-03-11 14:07:26.011 [main] AddPetToStoreWithLombok - The actual pet id should be 3 but we found 8
+[DEBUG] 2023-03-11 14:08:57.452 [main] GoRestWithLombok - The name value should be Tech Global but we found Tech Global
+[DEBUG] 2023-03-11 14:13:50.277 [main] GoRestWithLombok - The name value should be Tech Global but we found Tech Global

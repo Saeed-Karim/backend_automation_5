@@ -1,6 +1,6 @@
-package api.tdd;
+package api.tdd.go_rest;
 
-import api.pojo_classes.go_rest.CreateGoRestUser;
+import api.pojo_classes.go_rest.CreateGoRestUserWithoutLombok;
 import api.pojo_classes.go_rest.UpdateGoRestUser;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -15,11 +15,11 @@ import utils.ConfigReader;
 
 import static org.hamcrest.core.IsEqual.equalTo;
 
-public class GoRest {
+public class GoRestWithoutLombok {
 
     Response response;
     /**
-     * ObjectMapper is a class coming form fasterxml to convert Java object to Json
+     * ObjectMapper is a class coming form Jackson to convert a Java object to Json
      */
     ObjectMapper objectMapper = new ObjectMapper();
 
@@ -42,13 +42,13 @@ public class GoRest {
     @Test
     public void goRestCRUD() throws JsonProcessingException {
         // Creating a POJO (Bean) object
-        CreateGoRestUser createGoRestUser = new CreateGoRestUser();
+        CreateGoRestUserWithoutLombok createGoRestUserWithoutLombok = new CreateGoRestUserWithoutLombok();
 
         // assigned the values to the attributes
-        createGoRestUser.setName("Tom");
-        createGoRestUser.setGender("male");
-        createGoRestUser.setEmail(faker.internet().emailAddress());
-        createGoRestUser.setStatus("active");
+        createGoRestUserWithoutLombok.setName("Tom");
+        createGoRestUserWithoutLombok.setGender("male");
+        createGoRestUserWithoutLombok.setEmail(faker.internet().emailAddress());
+        createGoRestUserWithoutLombok.setStatus("active");
 
         System.out.println("======= Creating the user with POST request =========");
 
@@ -57,7 +57,7 @@ public class GoRest {
 //                .header("Content-Type", "application/json")
                 .contentType(ContentType.JSON)
                 .header("Authorization", "Bearer cd6f43f79e931dc381c5c228f3e80c9f6990ec23e970e0325e206b9d241e551e")
-                .body(objectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(createGoRestUser))
+                .body(objectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(createGoRestUserWithoutLombok))
 //                .when().post("https://gorest.co.in/public/v2/users")
                 .when().post("/public/v2/users")
                 .then().log().all()
@@ -122,8 +122,8 @@ public class GoRest {
 
         expectedGoRestName = updateGoRestUser.getName();
         expectedGoRestEmail = updateGoRestUser.getEmail();
-        expectedGoRestGender = createGoRestUser.getGender();
-        expectedGoRestStatus = createGoRestUser.getStatus();
+        expectedGoRestGender = createGoRestUserWithoutLombok.getGender();
+        expectedGoRestStatus = createGoRestUserWithoutLombok.getStatus();
 
         //"id" in the getInt is the name of the attribute in the response body
         int actualGoRestId = response.jsonPath().getInt("id");

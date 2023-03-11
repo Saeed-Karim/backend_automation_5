@@ -9,7 +9,7 @@ import lombok.Data;
 @Data
 @Builder
 /**
- * With @Builder
+ * With @Builder, we are able to assign
  */
 
 public class CreateGoRestUserWithLombok {
