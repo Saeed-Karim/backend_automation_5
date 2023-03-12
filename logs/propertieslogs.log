@@ -39,3 +39,26 @@
 [DEBUG] 2023-03-11 14:07:26.011 [main] AddPetToStoreWithLombok - The actual pet id should be 3 but we found 8
 [DEBUG] 2023-03-11 14:08:57.452 [main] GoRestWithLombok - The name value should be Tech Global but we found Tech Global
 [DEBUG] 2023-03-11 14:13:50.277 [main] GoRestWithLombok - The name value should be Tech Global but we found Tech Global
+[DEBUG] 2023-03-11 14:51:18.729 [main] GoRestWithoutLombok - The expected status is active but we found active
+[INFO ] 2023-03-11 15:24:15.743 [main] ReadingFromExcelFile - First name from the first cell is Tech Global
+[INFO ] 2023-03-11 15:27:42.084 [main] ReadingFromExcelFile - First name from the first cell is Tech Global
+[INFO ] 2023-03-11 15:27:42.096 [main] ReadingFromExcelFile - The second id value is 2.0
+[INFO ] 2023-03-11 15:29:46.863 [main] ReadingFromExcelFile - First name from the first cell is Tech Global
+[INFO ] 2023-03-11 15:29:46.870 [main] ReadingFromExcelFile - The second id value is 2.0
+[INFO ] 2023-03-11 15:29:46.871 [main] ReadingFromExcelFile - The last row number is 2
+[INFO ] 2023-03-11 15:33:27.138 [main] ReadingFromExcelFile - First name from the first cell is Tech Global
+[INFO ] 2023-03-11 15:33:27.144 [main] ReadingFromExcelFile - The second id value is 2.0
+[INFO ] 2023-03-11 15:33:27.151 [main] ReadingFromExcelFile - The last row number is 2
+[INFO ] 2023-03-11 15:33:27.152 [main] ReadingFromExcelFile - The last cell number is 4
+[INFO ] 2023-03-11 15:33:58.864 [main] ReadingFromExcelFile - First name from the first cell is Tech Global
+[INFO ] 2023-03-11 15:33:58.877 [main] ReadingFromExcelFile - The second id value is 2.0
+[INFO ] 2023-03-11 15:33:58.877 [main] ReadingFromExcelFile - The last row number is 2
+[INFO ] 2023-03-11 15:33:58.878 [main] ReadingFromExcelFile - The last cell number from the file is 4
+[INFO ] 2023-03-11 15:47:30.019 [main] ReadingFromExcelFile - First name from the first cell is Tech Global
+[INFO ] 2023-03-11 15:47:30.025 [main] ReadingFromExcelFile - The second id value is 2.0
+[INFO ] 2023-03-11 15:47:30.027 [main] ReadingFromExcelFile - The last row number is 2
+[INFO ] 2023-03-11 15:47:30.028 [main] ReadingFromExcelFile - The last cell number from the file is 4
+[INFO ] 2023-03-11 15:56:36.522 [main] ReadingFromExcelFile - First name from the first cell is Tech Global
+[INFO ] 2023-03-11 15:56:36.526 [main] ReadingFromExcelFile - The second id value is 2.0
+[INFO ] 2023-03-11 15:56:36.526 [main] ReadingFromExcelFile - The last row number is 2
+[INFO ] 2023-03-11 15:56:36.526 [main] ReadingFromExcelFile - The last cell number from the file is 4
