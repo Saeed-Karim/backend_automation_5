@@ -1,6 +1,6 @@
 Feature: Validate database connection
 
-  @db
+  @api
   Scenario Outline: Validate the minimum salary
     Given user is able to connect to database
     When user send "<query>" to database
@@ -9,3 +9,4 @@ Feature: Validate database connection
     Examples: Database Query
       | query                             | salary |
       | select min(salary) from employees | 2100   |
+
